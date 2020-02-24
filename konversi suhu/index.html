@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-
+         scale=1.0">
+    <title>konversi suhu</title>
+    <!--load bootstrap css-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!--load jquery and bootstrap js-->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+    <script type="text/javascript">
+        fahrenheit1 = () => {
+            let celcius = document.getElementById("celcius1").value;
+            let fahrenheit = (celcius * (9 / 5)) + 32;
+            document.getElementById("fahrenheit1").value = fahrenheit;
+        }
+        reamur1 = () => {
+            let celcius = document.getElementById("celcius1").value;
+            let reamur = (celcius * (4 / 5));
+            document.getElementById("reamur1").value = reamur;
+        }
+        kelvin1 = () => {
+            let celcius = document.getElementById("celcius1").value;
+            let kelvin = (celcius *1)+273;
+            document.getElementById('kelvin1').value = kelvin;
+        }
+        celcius2 = () => {
+            let fahrenheit = document.getElementById("fahrenheit2").value;
+            let celcius = (fahrenheit - 32) * (5 / 9);
+            document.getElementById("celcius2").value = celcius;
+        }
+        reamur2 = () => {
+            let fahrenheit = document.getElementById("fahrenheit2").value;
+            let reamur2 = (fahrenheit - 32) * (4 / 9);
+            document.getElementById("reamur2").value = reamur2;
+        }
+        kelvin2 = () => {
+            let fahrenheit = document.getElementById("fahrenheit2").value;
+            let kelvin2 = ((fahrenheit - 32) * (5 / 9) + 273);
+            document.getElementById("kelvin2").value = kelvin2;
+        }
+        celcius3 = () => {
+            let reamur = document.getElementById("reamur3").value;
+            let celcius = (reamur * (5 / 4));
+            document.getElementById("celcius3").value = celcius;
+        }
+        fahrenheit3 = () => {
+            let reamur = document.getElementById("reamur3").value;
+            let fahrenheit = ((9/4)* reamur)+32;
+            document.getElementById("fahrenheit3").value = fahrenheit;
+        }
+        kelvin3 = () => {
+            let reamur = document.getElementById("reamur3").value;
+            let kelvin = ((5/4)*reamur)+273;
+            document.getElementById("kelvin3").value = kelvin;
+
+        }
+        celcius4 = () => {
+            let kelvin = document.getElementById("kelvin4").value;
+            let celcius = kelvin - 273;
+            document.getElementById("celcius4").value = celcius;
+        }
+        fahrenheit4 = () => {
+            let kelvin = document.getElementById("kelvin4").value;
+            let fahrenheit = ((9/5)*(kelvin-273))+32;
+            document.getElementById("fahrenheit4").value = fahrenheit;
+        }
+        reamur4 = () => {
+            let kelvin = document.getElementById("kelvin4").value;
+            let reamur = (4 / 5) * (kelvin - 273);
+            document.getElementById("reamur4").value = reamur;
+        }
+
+
+
+
+
+    </script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="card col-sm-4">
+                <div class="card-header bg-danger text-white">
+                    <h3>convert from °celcius </h3>
+                </div>
+                <div class="card-body font-italic">
+                    masukkan nilai °celcius
+                    <input type="number" id="celcius1" class="form-control">
+                    <br>
+                    <button type="button" class="btn btn-danger btn-block" onclick="fahrenheit1()">
+                        convert to fahrenheit
+                    </button>
+                    <b>hasil konversi(°fahrenheit)</b>
+                    <input type="text" id="fahrenheit1" class="form-control" readonly>
+                    <hr>
+
+                    <button type="button" class="btn btn-danger btn-block" onclick="reamur1()">
+                        convert to reamur
+                    </button>
+                    <b>hasil konversi(°reamur)</b>
+                    <input type="text" id="reamur1" class="form-control" readonly>
+                    <hr>
+
+                    <button type="button" class="btn btn-danger btn-block" onclick="kelvin1()">
+                        convert to kelvin
+                    </button>
+                    <b>hasil konversi(°kelvin)</b>
+                    <input type="text" id='kelvin1' class="form-control" readonly>
+                </div>
+            </div>
+        
+
+        <div class="card col-sm-4">
+            <div class="card-header bg-warning text-white">
+                <h3>convert from °fahrenheit </h3>
+            </div>
+            <div class="card-body font-italic">
+                masukkan nilai °fahrenheit
+                <input type="number" id="fahrenheit2" class="form-control">
+                <br>
+                <button type="button" class="btn btn-warning btn-block" onclick="celcius2()">
+                    convert to celcius
+                </button>
+                <b>hasil konversi(°celcius)</b>
+                <input type="text" id="celcius2" class="form-control" readonly>
+                <hr>
+
+                <button type="button" class="btn btn-warning btn-block" onclick="reamur2()">
+                    convert to reamur
+                </button>
+                <b>hasil konversi(°reamur)</b>
+                <input type="text" id="reamur2" class="form-control" readonly>
+                <hr>
+
+                <button type="button" class="btn btn-warning btn-block" onclick="kelvin2()">
+                    convert to kelvin
+                </button>
+                <b>hasil konversi(°kelvin)</b>
+                <input type="text" id="kelvin2" class="form-control" readonly>
+
+            </div>
+        </div>
+
+
+        <div class="card col-sm-4">
+            <div class="card-header bg-success text-white">
+                <h3>convert from °reamur </h3>
+            </div>
+            <div class="card-body font-italic">
+                masukkan nilai °reamur
+                <input type="number" id="reamur3" class="form-control">
+                <br>
+                <button type="button" class="btn btn-success btn-block" onclick="celcius3()">
+                    convert to celcius
+                </button>
+                <b>hasil konversi(°celcius)</b>
+                <input type="text" id="celcius3" class="form-control" readonly>
+                <hr>
+
+                <button type="button" class="btn btn-success btn-block" onclick="fahrenheit3()">
+                    convert to fahrenheit
+                </button>
+                <b>hasil konversi(°fahrenheit)</b>
+                <input type="text" id="fahrenheit3" class="form-control" readonly>
+                <hr>
+
+                <button type="button" class="btn btn-success btn-block" onclick="kelvin3()">
+                    convert to kelvin
+                </button>
+                <b>hasil konversi(°kelvin)</b>
+                <input type="text" id="kelvin3" class="form-control" readonly>
+
+            </div>
+        </div>
+
+
+        <div class="card col-sm-4">
+            <div class="card-header bg-info text-white">
+                <h3>convert from °kelvin </h3>
+            </div>
+            <div class="card-body font-italic">
+                masukkan nilai °kelvin
+                <input type="number" id="kelvin4" class="form-control">
+                <br>
+                <button type="button" class="btn btn-info btn-block" onclick="celcius4()">
+                    convert to celcius
+                </button>
+                <b>hasil konversi(°celcius)</b>
+                <input type="text" id="celcius4" class="form-control" readonly>
+                <hr>
+
+                <button type="button" class="btn btn-info btn-block" onclick="fahrenheit4()">
+                    convert to fahrenheit
+                </button>
+                <b>hasil konversi(°fahrenheit)</b>
+                <input type="text" id="fahrenheit4" class="form-control" readonly>
+                <hr>
+
+                <button type="button" class="btn btn-info btn-block" onclick="reamur4()">
+                    convert to reamur
+                </button>
+                <b>hasil konversi(°reamur)</b>
+                <input type="text" id="reamur4" class="form-control" readonly>
+
+            </div>
+        </div>
+
+    </div>
+
+    </div>
+
+
+
+</body>
+
+</html>
